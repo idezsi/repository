@@ -8,11 +8,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace ServerApp.SocketNp
 {
     public class SynchronousSocketListener
     {
-
+        
         // Incoming data from the client.  
         public static string data = null;
 
@@ -63,8 +65,8 @@ namespace ServerApp.SocketNp
                     byte[] response;
                     Users users = new Users();
                     SymmetricAlgorithm aes = new AesManaged();
-                    //if (users.UsersDict[username].Equals(SymmetricEncryption.DecryptData(aes, password)))
-                    if (true)
+                    if (users.UsersDict[username].Equals(password))
+                 
                         response = Encoding.ASCII.GetBytes("correct");
                     else
                         response = Encoding.ASCII.GetBytes("wrong");

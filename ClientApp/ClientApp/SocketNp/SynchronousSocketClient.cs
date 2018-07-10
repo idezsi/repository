@@ -16,10 +16,10 @@ namespace ClientApp.SocketNp
             byte[] bytes = new byte[1024];
             SymmetricAlgorithm aes = new AesManaged();
 
-           
 
 
-            string up = Username+'\n' + SymmetricEncryption.EncryptText(aes, Password);
+
+            string up = Username + '\n' + HashesClass.computeHash(Password, "MD5");
             // Connect to a remote device.  
             try
             {

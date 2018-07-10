@@ -11,9 +11,8 @@ namespace ServerApp
     {
 
         public Users() {
-            _UsersDict.Add("user", "pass");
-            _UsersDict.Add("user1", "pass1");
-            _UsersDict.Add("user2", "pass2");
+            _UsersDict.Add("user", "1a1dc91c907325c69271ddf0c944bc72");
+
         }
         private Dictionary<string, string> _UsersDict = new Dictionary<string, string>();
 

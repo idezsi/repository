@@ -17,6 +17,8 @@ namespace ServerApp
         {
             // Create a decryptor from the aes algorithm   
             ICryptoTransform decryptor = aesAlgorithm.CreateDecryptor(aesAlgorithm.Key, aesAlgorithm.IV);
+            //TODO: Write key somewhere
+
 
             Console.WriteLine(System.Text.Encoding.ASCII.GetString(aesAlgorithm.Key));
             byte[] encryptedDataBuffer = Encoding.ASCII.GetBytes(value);
@@ -39,6 +41,8 @@ namespace ServerApp
         public static string EncryptText(SymmetricAlgorithm aesAlgorithm, string text)
         {
             // Create an encryptor from the AES algorithm instance and pass the aes algorithm key and inialiaztion vector to generate a new random sequence each time for the same text  
+            //TODO: read key from somewhere
+
             ICryptoTransform encryptor = aesAlgorithm.CreateEncryptor(aesAlgorithm.Key, aesAlgorithm.IV);
 
             // Create a memory stream to save the encrypted data in it  
