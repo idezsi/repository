@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HashingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Rainbow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="md5hash" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="sha1hash" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="sha2hash" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="HashingEntitiesConn" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Rainbows" EntityType="Self.Rainbow" />
+  </EntityContainer>
+</Schema>
